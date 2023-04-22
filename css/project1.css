@@ -1,0 +1,354 @@
+body {
+  background: #ccc;
+  margin: 50px 0 50px 0 !important;
+}
+
+.map_container {
+  width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #333333;
+  padding: 20px;
+}
+.map_container .map_content {
+  width: 100%;
+  height: auto;
+  margin: 10px 0px 20px 20px;
+  position: relative;
+  transform: rotate3d(2, 1, 1, 45deg);
+}
+.map_container .map_content .map_wrapper {
+  width: 75%;
+}
+.map_container .map_content .map_wrapper .map_body {
+  width: 50%;
+  height: auto;
+  border: 1px solid #333;
+  border-bottom: 0;
+  margin: 20px auto;
+  margin-bottom: 0;
+  padding: 20px;
+  padding-bottom: 0;
+  position: relative;
+}
+.map_container .map_content .map_wrapper .map_body:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  border: 1px solid #ffffff;
+  z-index: 1;
+  width: 100%;
+}
+.map_container .map_content .map_wrapper .map_body .pond {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map_container .map_content .map_wrapper .map_body .table_content {
+  position: absolute;
+  left: 110%;
+  bottom: 10%;
+  transform: rotate3d(-2, 4, 2, 315deg);
+}
+.map_container .map_content .map_wrapper .map_body .black-gb tr th,
+.map_container .map_content .map_wrapper .map_body .black-gb tr td {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+}
+.map_container .map_content .map_wrapper .map_body .compass_body {
+  width: 150px;
+  height: 150px;
+}
+.map_container .map_content .map_wrapper .map_body .compass_body img {
+  width: 100%;
+}
+.map_container .map_content .map_wrapper .map_body .area_averlay {
+  position: absolute;
+  z-index: 11;
+  height: 150px;
+  width: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: rgb(255, 234, 0);
+  color: #333333;
+}
+.map_container .map_content .map_wrapper .map_body .area_averlay .area_overlay_title {
+  margin: 0;
+}
+.map_container .map_content .map_wrapper .map_body .area_averlay.fade-in {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+.map_container .map_content .map_wrapper .map_body .area_averlay.fade-out {
+  transition: ease-in-out;
+  display: none;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.map_container .map_content .map_wrapper .road_content {
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  width: 80%;
+  margin-top: 20px;
+  margin: auto;
+  position: relative;
+}
+.map_container .map_content .map_wrapper .road_content .road_border {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px dotted #333333;
+}
+.map_container .map_content .map_wrapper .road_content .road_border .text {
+  position: absolute;
+  left: 55%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+.map_container .map_content .map_wrapper .road_content .line,
+.map_container .map_content .map_wrapper .road_content .ribbon_left,
+.map_container .map_content .map_wrapper .road_content .ribbon_right {
+  position: absolute;
+}
+.map_container .map_content .map_wrapper .road_content .ribbon_left {
+  left: -35px;
+  z-index: -1;
+  top: -16px;
+  width: 70px;
+  height: 70px;
+  border-left: 1px solid #2c2c2c;
+  border-bottom: 1px solid #000;
+  transform: rotate(45deg);
+  background: #fff;
+}
+.map_container .map_content .map_wrapper .road_content .ribbon_right {
+  right: -35px;
+  z-index: -1;
+  top: -16px;
+  width: 70px;
+  height: 70px;
+  border-top: 1px solid #2c2c2c;
+  border-right: 1px solid #000;
+  transform: rotate(45deg);
+  background: #fff;
+}
+.map_container .map_content .map_wrapper .road_content:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  left: -15px;
+  top: -16px;
+  transform: rotate(90deg);
+  border-top: 1px solid #333333;
+}
+.map_container .map_content .map_wrapper .road_content:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  right: -15px;
+  top: -16px;
+  transform: rotate(90deg);
+  border-top: 1px solid #333333;
+}
+.map_container .map_content .map_wrapper .road_content .bottom_left {
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  left: -15px;
+  bottom: -16px;
+  transform: rotate(90deg);
+  border-top: 1px solid #333333;
+}
+.map_container .map_content .map_wrapper .road_content .bottom_right {
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  right: -15px;
+  bottom: -16px;
+  transform: rotate(90deg);
+  border-top: 1px solid #333333;
+}
+.map_container .map_content .map_wrapper .road_content .top_left {
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 1px;
+  background: #000;
+  transform: rotate(90deg);
+}
+
+.land_content .land_body:nth-child(1) {
+  margin-bottom: 20px;
+}
+.land_content .land_box {
+  width: 100%;
+  height: auto;
+}
+.land_content .land_box .wrapper_content {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(auto-fill, 100%);
+  height: 100%;
+}
+.land_content .land_box .wrapper_content .wrapper_top,
+.land_content .land_box .wrapper_content .wrapper_bottom,
+.land_content .land_box .wrapper_content .wrapper_middle {
+  height: 100px;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_bottom,
+.land_content .land_box .wrapper_content .wrapper.wrapper_top {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(8, 12.5%);
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_middle {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(2, 50%);
+}
+.land_content .land_box .wrapper_content .wrapper .box {
+  border: 1px solid #333333;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_top .box:not(:nth-child(1), :nth-last-child(1)),
+.land_content .land_box .wrapper_content .wrapper.wrapper_bottom .box:not(:nth-child(1), :nth-last-child(1)) {
+  border-left: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_top .box:nth-last-child(1),
+.land_content .land_box .wrapper_content .wrapper.wrapper_bottom .box:nth-last-child(1) {
+  border-left: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_middle .box:not(:nth-child(1), :nth-last-child(1)) {
+  border-top: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_middle .box:nth-child(even) {
+  border-left: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_middle .box:nth-child(1), .land_content .land_box .wrapper_content .wrapper.wrapper_middle .box:nth-last-child(1) {
+  border-top: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.wrapper_middle .box:nth-last-child(2), .land_content .land_box .wrapper_content .wrapper.wrapper_middle .box:nth-last-child(1) {
+  border-bottom: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.single_land .box:nth-child(1) {
+  border-top: 0;
+}
+.land_content .land_box .wrapper_content .wrapper.single_land {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(1, 100%);
+}
+.land_content .land_box .wrapper_content .wrapper.single_land .h-head-land-bottom {
+  height: 25px;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.area {
+  position: absolute;
+  z-index: 10;
+  padding: 10px;
+  display: grid;
+  cursor: pointer;
+  color: #f00;
+}
+
+.area span {
+  text-transform: capitalize;
+}
+
+.b8 {
+  left: -5px;
+  bottom: -8px;
+}
+
+.b9 {
+  left: -5px;
+  top: 53%;
+}
+
+.b10 {
+  left: -5px;
+  top: -28px;
+}
+
+.b11 {
+  right: -30px;
+  top: -28px;
+}
+
+.b12 {
+  right: -31px;
+  top: 10%;
+}
+
+.b13 {
+  right: -31px;
+  top: 50%;
+}
+
+.b14 {
+  right: -31px;
+  bottom: -8px;
+}
+
+.b15 {
+  right: 10px;
+  bottom: -32px;
+}
+
+.b16 {
+  left: 10px;
+  bottom: -32px;
+}
+
+.b8:before,
+.b9:before,
+.b10:before,
+.b11:before,
+.b12:before,
+.b13:before,
+.b14:before,
+.b15:before,
+.b16:before {
+  content: "x";
+  font-size: 20px;
+  position: absolute;
+}
+
+.b8:before,
+.b9:before,
+.b10:before,
+.b11:before,
+.b12:before,
+.b13:before,
+.b14:before,
+.b15:before,
+.b16:before {
+  left: 0px;
+  top: 20%;
+}/*# sourceMappingURL=project1.css.map */
